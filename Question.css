@@ -1,0 +1,197 @@
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   Font
+========================== */
+
+@font-face{
+    font-family:"QuizFont";
+    src:url("./Fonts/RedChristmas.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* ==========================
+   Body
+========================== */
+
+body{
+    background:#B8F1E6;
+    font-family:"QuizFont";
+
+    min-height:100vh;
+    min-height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:2rem;
+    overflow:hidden;
+
+    position:relative;
+}
+
+/* ==========================
+   Decorative Border
+========================== */
+
+.border{
+    position:absolute;
+
+    top:22px;
+    left:22px;
+    right:22px;
+    bottom:22px;
+
+    border:4px solid white;
+
+    pointer-events:none;
+}
+
+/* ==========================
+   Main Container
+========================== */
+
+.container{
+    width:min(95vw,900px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* ==========================
+   Heading
+========================== */
+
+h1{
+
+    color:white;
+
+    font-size:clamp(2.8rem,6.5vw,7rem);
+
+    letter-spacing:clamp(2px,0.4vw,4px);
+
+    text-shadow:
+        5px 6px 8px rgba(0,0,0,.30);
+
+    margin-bottom:clamp(2rem,5vw,3.5rem);
+
+    line-height:1.1;
+}
+
+/* ==========================
+   Cake Buttons Container
+========================== */
+
+.cake-buttons{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:clamp(1rem,3vw,2.1rem);
+
+    width:100%;
+    align-items:center;
+}
+
+/* ==========================
+   Cake Buttons
+========================== */
+
+.cake-btn{
+
+    width:min(90vw,540px);
+
+    height:clamp(56px,8vw,72px);
+
+    border:5px solid white;
+    border-radius:45px;
+
+    background:#E786D8;
+
+    color:white;
+
+    font-family:"QuizFont";
+
+    font-size:clamp(1.6rem,4vw,3.1rem);
+
+    letter-spacing:1px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.cake-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 12px 22px rgba(0,0,0,.30);
+}
+
+.cake-btn:active{
+
+    transform:scale(.97);
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width:768px){
+
+    .border{
+        top:12px;
+        left:12px;
+        right:12px;
+        bottom:12px;
+    }
+
+    .container{
+        width:100%;
+        padding:1rem;
+    }
+
+    .cake-btn{
+        border-width:4px;
+    }
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width:480px){
+
+    h1{
+        line-height:1.2;
+    }
+
+    .cake-btn{
+
+        width:100%;
+
+        font-size:1.5rem;
+
+        border-radius:30px;
+    }
+}

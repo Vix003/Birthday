@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make a Wish!</title>
+<link rel="stylesheet" href="Cake.css">
+<script>
+(function(){
+  var flavor=localStorage.getItem("cakeFlavor")||"chocolate";
+  document.documentElement.classList.add(flavor);
+})();
+</script>
+</head>
+<body>
+<div class="border"></div>
+
+<div class="container">
+<h2 id="wishText">MAKE A WISH &amp; BLOW!</h2>
+
+<div class="cake">
+<svg id="cakeSVG" viewBox="0 0 700 520" width="700" height="520">
+
+<g id="candles">
+
+<g transform="translate(210,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+<g transform="translate(250,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+<g transform="translate(290,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+<g transform="translate(330,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+<g transform="translate(370,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+<g transform="translate(410,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+<g transform="translate(450,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+<g transform="translate(490,180)">
+  <rect class="stick" x="-8" y="-70" width="16" height="70" rx="3" fill="var(--candle)"/>
+  <g class="flame">
+    <path d="M0 -98 C12 -88 10 -74 0 -66 C-10 -74 -12 -88 0 -98Z" fill="var(--flame1)"/>
+    <path d="M0 -90 C6 -84 5 -75 0 -70 C-5 -75 -6 -84 0 -90Z" fill="var(--flame2)"/>
+  </g>
+</g>
+
+</g>
+
+<rect x="130" y="170" width="440" height="260" rx="35" fill="var(--cake)"/>
+<rect x="130" y="338" width="440" height="18" fill="var(--cream)"/>
+
+<path fill="var(--icing)"
+d="M130 170 H570 V245
+C570 275 530 275 530 245 V220
+C530 190 490 190 490 220 V245
+C490 275 450 275 450 245 V220
+C450 190 410 190 410 220 V245
+C410 275 370 275 370 245 V220
+C370 190 330 190 330 220 V245
+C330 275 290 275 290 245 V220
+C290 190 250 190 250 220 V245
+C250 275 210 275 210 245 V220
+C210 190 170 190 170 220 V245
+C170 275 130 275 130 245 Z"/>
+</svg>
+</div>
+
+<p id="micHint"></p>
+<button id="manualBlow" type="button">Tap to blow out the candles</button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="Cake.js"></script>
+</body>
+</html>

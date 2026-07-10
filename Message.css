@@ -1,0 +1,186 @@
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   Font
+========================== */
+
+@font-face{
+    font-family:"QuizFont";
+    src:url("./Fonts/RedChristmas.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* ==========================
+   Body
+========================== */
+
+body{
+
+    background:#B8F1E6;
+
+    min-height:100vh;
+    min-height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:2rem;
+
+    overflow:hidden;
+
+    position:relative;
+
+    font-family:"QuizFont";
+}
+
+/* ==========================
+   Decorative Border
+========================== */
+
+.border{
+
+    position:absolute;
+
+    top:22px;
+    left:22px;
+    right:22px;
+    bottom:22px;
+
+    border:4px solid white;
+
+    pointer-events:none;
+}
+
+/* ==========================
+   Main Container
+========================== */
+
+.container{
+
+    width:min(95vw,900px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* ==========================
+   Heading
+========================== */
+
+h1{
+
+    color:white;
+
+    font-size:clamp(3rem,12vw,12rem);
+
+    letter-spacing:clamp(2px,.5vw,6px);
+
+    text-shadow:
+        5px 6px 10px rgba(0,0,0,.18);
+
+    margin-bottom:clamp(2rem,5vw,3.5rem);
+
+    line-height:1;
+}
+
+/* ==========================
+   Button
+========================== */
+
+#againBtn{
+
+    background:#E7A6D8;
+
+    color:white;
+
+    font-family:Arial, sans-serif;
+    font-weight:bold;
+
+    font-size:clamp(1rem,2.5vw,1.4rem);
+
+    padding:
+        clamp(.8rem,2vw,1rem)
+        clamp(2rem,6vw,3.8rem);
+
+    border:5px solid white;
+    border-radius:40px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 18px rgba(0,0,0,.25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+#againBtn:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+        0 15px 25px rgba(0,0,0,.28);
+}
+
+#againBtn:active{
+
+    transform:scale(.96);
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media (max-width:768px){
+
+    .border{
+
+        top:12px;
+        left:12px;
+        right:12px;
+        bottom:12px;
+    }
+
+    .container{
+
+        width:100%;
+        padding:1rem;
+    }
+
+    #againBtn{
+
+        border-width:4px;
+    }
+}
+
+/* ==========================
+   Small Phones
+========================== */
+
+@media (max-width:480px){
+
+    h1{
+
+        line-height:1.1;
+    }
+
+    #againBtn{
+
+        width:min(100%,320px);
+    }
+}

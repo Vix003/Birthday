@@ -1,0 +1,180 @@
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ==========================
+   Font
+========================== */
+
+@font-face{
+    font-family:"QuizFont";
+    src:url("./Fonts/RedChristmas.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* ==========================
+   Body
+========================== */
+
+body{
+    background:#B8F1E6;
+    font-family:"QuizFont";
+
+    min-height:100vh;
+    min-height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:2rem;
+    overflow:hidden;
+
+    position:relative;
+}
+
+/* ==========================
+   Decorative Border
+========================== */
+
+.border{
+    position:absolute;
+
+    top:22px;
+    left:22px;
+    right:22px;
+    bottom:22px;
+
+    border:4px solid white;
+
+    pointer-events:none;
+}
+
+/* ==========================
+   Main Container
+========================== */
+
+.container{
+    width:min(95vw,900px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+}
+
+/* ==========================
+   Heading
+========================== */
+
+h1{
+    color:white;
+
+    font-size:clamp(3rem,10vw,8rem);
+
+    letter-spacing:clamp(2px,0.4vw,5px);
+
+    text-shadow:
+        5px 6px 8px rgba(0,0,0,.30);
+
+    margin-bottom:clamp(2rem,5vw,3rem);
+
+    line-height:1;
+}
+
+/* ==========================
+   Play Button
+========================== */
+
+.play-button{
+
+    width:clamp(140px,30vw,230px);
+    height:clamp(140px,30vw,230px);
+
+    border:none;
+    border-radius:50%;
+
+    background:#E7A6D8;
+
+    cursor:pointer;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.30);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.play-button:hover{
+    transform:scale(1.05);
+}
+
+.play-button:active{
+    transform:scale(.96);
+}
+
+/* ==========================
+   Inner Ring
+========================== */
+
+.inner-ring{
+
+    width:85%;
+    height:85%;
+
+    border:4px solid white;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ==========================
+   Play Triangle
+========================== */
+
+.triangle{
+
+    width:0;
+    height:0;
+
+    border-top:clamp(24px,5vw,42px) solid transparent;
+    border-bottom:clamp(24px,5vw,42px) solid transparent;
+    border-left:clamp(38px,7vw,65px) solid white;
+
+    margin-left:clamp(8px,1.5vw,14px);
+}
+
+/* ==========================
+   Mobile Adjustments
+========================== */
+
+@media (max-width:768px){
+
+    .border{
+        top:12px;
+        left:12px;
+        right:12px;
+        bottom:12px;
+    }
+
+    .container{
+        width:100%;
+        padding:1rem;
+    }
+}

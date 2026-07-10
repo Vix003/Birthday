@@ -1,0 +1,296 @@
+/* ==========================
+   Reset
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@font-face{
+    font-family:"QuizFont";
+    src:url("./Fonts/RedChristmas.otf") format("opentype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+/* ==========================
+   Theme Variables
+========================== */
+
+:root,
+html.chocolate{
+
+    --cake:#9B7653;
+    --icing:#7A5939;
+    --cream:#755230;
+
+    --candle:#7A5738;
+    --flame1:#FFD34D;
+    --flame2:#FF6B1A;
+}
+
+html.vanilla{
+
+    --cake:#EFDDBB;
+    --icing:#FBF6EC;
+    --cream:#E4CFA2;
+
+    --candle:#F7F2E7;
+    --flame1:#FFD34D;
+    --flame2:#FF6B1A;
+}
+
+html.redvelvet{
+
+    --cake:#A5303B;
+    --icing:#FFFFFF;
+    --cream:#7C1F28;
+
+    --candle:#FFFFFF;
+    --flame1:#FFD34D;
+    --flame2:#FF6B1A;
+}
+
+/* ==========================
+   Body
+========================== */
+
+body{
+
+    background:#B8F1E6;
+
+    min-height:100vh;
+    min-height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:2rem;
+
+    font-family:"QuizFont";
+}
+
+/* ==========================
+   Decorative Border
+========================== */
+
+.border{
+
+    position:absolute;
+
+    inset:22px;
+
+    border:4px solid white;
+
+    pointer-events:none;
+}
+
+/* ==========================
+   Container
+========================== */
+
+.container{
+
+    width:min(95vw,900px);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    gap:1.2rem;
+
+    transform:translateY(clamp(15px, 3vh, 40px));
+}
+
+/* ==========================
+   Cake
+========================== */
+
+.cake{
+
+    width:min(90vw,700px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#cakeSVG{
+
+    width:100%;
+    height:auto;
+
+    overflow:visible;
+
+    filter:drop-shadow(0 8px 12px rgba(0,0,0,.12));
+}
+
+/* ==========================
+   SVG Candle Flames
+========================== */
+
+.flame{
+
+    transform-box:fill-box;
+    transform-origin:center bottom;
+
+    animation:flicker .18s infinite alternate;
+}
+
+@keyframes flicker{
+
+    0%{
+        rotate:-2deg;
+        scale:1 1;
+    }
+
+    50%{
+        rotate:2deg;
+        scale:1 1.08;
+    }
+
+    100%{
+        rotate:-1deg;
+        scale:1 .95;
+    }
+
+}
+
+#candles.blown .flame{
+
+    opacity:0;
+
+    transform:scale(.2);
+}
+
+/*@keyframes flicker{
+
+    0%{
+
+        transform:rotate(-2deg) scaleY(1);
+    }
+
+    50%{
+
+        transform:rotate(2deg) scaleY(1.08);
+    }
+
+    100%{
+
+        transform:rotate(-1deg) scaleY(.95);
+    }
+}*/
+
+/* ==========================
+   Wish Text
+========================== */
+
+#wishText{
+
+    margin-top:clamp(20px, 4vh, 50px);
+    margin-bottom:clamp(20px, 3vh, 35px);
+
+    color:white;
+
+    font-family:"QuizFont";
+
+    font-size:clamp(3rem,7vw,6.25rem);
+
+    letter-spacing:clamp(2px,.5vw,5px);
+
+    text-shadow:
+        5px 6px 8px rgba(0,0,0,.30);
+
+    opacity:0;
+
+    transition:.6s;
+
+    margin-bottom:1rem;
+}
+
+#wishText.show{
+
+    opacity:1;
+}
+
+/* ==========================
+   Mic Hint
+========================== */
+
+#micHint{
+
+    color:#E7A6D8;
+
+    font-size:clamp(1rem,2vw,1.25rem);
+
+    opacity:.9;
+
+    transition:opacity .5s ease;
+}
+
+/* ==========================
+   Manual Blow Button
+========================== */
+
+#manualBlow{
+
+    display:none;
+
+    margin-top:.5rem;
+
+    font-family:inherit;
+
+    font-size:clamp(1rem,2vw,1.1rem);
+
+    padding:
+        .9rem
+        1.7rem;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#5A4423;
+
+    box-shadow:
+        0 8px 16px rgba(0,0,0,.15);
+
+    transition:
+        transform .18s ease;
+}
+
+#manualBlow:hover{
+
+    transform:translateY(-3px);
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:768px){
+
+    .border{
+
+        inset:12px;
+    }
+
+    .container{
+
+        width:100%;
+    }
+}
