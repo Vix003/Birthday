@@ -1,26 +1,12 @@
 (function () {
 
-  // ---------------------------------------------------------
-  // SETTINGS — tweak these to taste
-  // ---------------------------------------------------------
-
-  // Where to send your friend once the candles are blown out.
-  // Change this to whatever page you want next.
   const REDIRECT_URL = "Message.html";
 
-  // How loud a "blow" needs to be to count, on a 0–1 scale.
-  // Raise this if it triggers too easily (e.g. from talking),
-  // lower it if it's hard to trigger.
   const BLOW_THRESHOLD = 0.10;
 
-  // How many consecutive loud animation frames are needed
-  // before we count it as a real blow (avoids false triggers).
   const SUSTAIN_FRAMES = 6;
 
-  // How long to let the confetti play before redirecting.
   const REDIRECT_DELAY_MS = 2600;
-
-  // ---------------------------------------------------------
 
   const wishText = document.getElementById("wishText");
   const candlesEl = document.getElementById("candles");
@@ -62,7 +48,7 @@
       origin: { y: 0.5 },
     });
 
-    // Side cannons for a couple of seconds
+    // Side cannons
     const end = Date.now() + 2000;
     (function frame() {
       confetti({ particleCount: 4, angle: 60, spread: 60, origin: { x: 0 } });
@@ -71,8 +57,6 @@
     })();
   }
 
-  // Candles / manual button always work as a fallback,
-  // in case the mic is unavailable or the person prefers to tap.
   if (candlesEl) candlesEl.addEventListener("click", blowOutCandles);
   if (manualBlowBtn) manualBlowBtn.addEventListener("click", blowOutCandles);
 
@@ -88,8 +72,6 @@
       source.connect(analyser);
 
       const data = new Uint8Array(analyser.fftSize);
-
-      //if (micHint) micHint.textContent = "Blow into your microphone 💨";
 
       function checkVolume() {
         if (blown) return;
@@ -115,11 +97,6 @@
 
       checkVolume();
     } catch (err) {
-      // Mic blocked, unavailable, or unsupported — offer the fallback button instead.
-      //if (micHint) {
-      //  micHint.textContent = "Couldn't access your mic — tap the button below to blow out the candles!";
-      //}
-      //if (manualBlowBtn) manualBlowBtn.style.display = "inline-block";
     }
   }
 
