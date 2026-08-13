@@ -5,10 +5,12 @@
 }
 
 @font-face{
+    
     font-family:"QuizFont";
     src:url("./Fonts/RedChristmas.otf") format("opentype");
     font-weight:normal;
     font-style:normal;
+    
 }
 
 :root,
