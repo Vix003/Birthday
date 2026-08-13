@@ -1,17 +1,11 @@
-// Restart button
 document.getElementById("againBtn").addEventListener("click", () => {
     window.location.href = "Entry.html";
 });
-
-// ===============================
-// Side Confetti
-// ===============================
 
 const duration = 3000;
 const animationEnd = Date.now() + duration;
 
 (function frame() {
-
     confetti({
         particleCount: 4,
         angle: 60,
@@ -29,5 +23,4 @@ const animationEnd = Date.now() + duration;
     if (Date.now() < animationEnd) {
         requestAnimationFrame(frame);
     }
-
 })();
