@@ -4,7 +4,7 @@
 
   const BLOW_THRESHOLD = 0.10;
 
-  const SUSTAIN_FRAMES = 6;
+  const SUSTAIN_FRAMES = 3;
 
   const REDIRECT_DELAY_MS = 2600;
 
