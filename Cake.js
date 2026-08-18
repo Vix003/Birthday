@@ -2,7 +2,7 @@
 
   const REDIRECT_URL = "Message.html";
 
-  const BLOW_THRESHOLD = 0.035;
+  const BLOW_THRESHOLD = 0.10;
 
   const SUSTAIN_FRAMES = 3;
 
